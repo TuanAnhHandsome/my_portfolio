@@ -1,197 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- main css -->
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <!-- overlay -->
-    <section id="overlay"></section>
-    <!-- header -->
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <!-- logo -->
-          <div class="navbar__logo">
-            <img src="./img/logo.svg" alt="website logo" />
-          </div>
-          <!-- links -->
-          <ul class="navbar__links">
-            <li class="navbar__link"><a href="#works">Work</a></li>
-            <li class="navbar__link"><a href="#things">About</a></li>
-            <li class="navbar__link"><a href="#works">Resume</a></li>
-            <a href="#footer"><button class="navbar__btn">Contact</button></a>
-          </ul>
-          <!-- menu button -->
-          <div class="navbar__icons">
-            <div class="navbar__icon"></div>
-          </div>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anh Tuan — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Epilogue:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#" class="nav__logo">AT</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <p class="hero__greeting reveal">Hello, I'm</p>
+      <h1 class="hero__name reveal">Anh Tuan</h1>
+      <p class="hero__role reveal">
+        <span class="typed" id="typed"></span>
+      </p>
+      <p class="hero__desc reveal">
+        Final-year Software Engineering student. I build full-stack web applications
+        using Java, Spring Boot &amp; React — with care for clean code and smooth UX.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#projects" class="btn btn--dark">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Say Hello</a>
       </div>
-    </header>
-    <!-- banner -->
-    <section id="banner">
-      <div class="container">
-        <!-- img -->
-        <div class="banner__img">
-          <img src="./img/banner-img.png" alt="illustration of women" />
-        </div>
-        <!-- heading -->
-        <div class="banner__heading">
-          <h1>Hello, I'm Lisa</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a
-            est culpa soluta modi beatae unde incidunt dolorem placeat maiores?
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__label reveal">01 — About</div>
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="section__title reveal">A bit about me</h2>
+          <p class="reveal">
+            I'm a final-year Software Engineering student passionate about building full-stack
+            web applications. My main stack is <strong>JS / Spring Boot</strong> on the backend
+            and <strong>React</strong> on the frontend.
           </p>
-          <a href="#"><button class="banner__btn">View More</button></a>
-          <div class="banner__socials">
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+          <p class="reveal">
+            I enjoy designing user-friendly interfaces and building practical software
+            solutions. Through my projects, I have developed systems such as a classroom
+            management system, a travel booking website, and a coffee shop management
+            application. I'm always eager to learn new technologies and grow as a
+            software developer.
+          </p>
+          <div class="about__tags reveal">
+            <span>Clean Code</span>
+            <span>REST APIs</span>
+            <span>Full-Stack</span>
+            <span>IoT</span>
+          </div>
+        </div>
+        <div class="about__stats reveal">
+          <div class="stat">
+            <b>5+</b>
+            <span>Projects</span>
+          </div>
+          <div class="stat">
+            <b>4</b>
+            <span>Years studying</span>
+          </div>
+          <div class="stat">
+            <b>10+</b>
+            <span>Technologies</span>
+          </div>
+          <div class="stat">
+            <b>1</b>
+            <span>Goal: ship great work</span>
           </div>
         </div>
       </div>
-    </section>
-    <!-- things -->
-    <section id="things">
-      <div class="container">
-        <!-- dec -->
-        <div class="things__dec">
-          <img src="./img/things-dec-l.png" alt="illustration of leaf" />
-        </div>
-        <!-- dec -->
-        <div class="things__dec">
-          <img src="./img/things-dec-r.png" alt="illustration of leaf" />
-        </div>
-        <!-- heading -->
-        <h2>Things I Do</h2>
-        <!-- item 1 -->
-        <div class="things__item">
-          <!-- img -->
-          <img src="./img/things-item-1.png" alt="illustration of women" />
-          <!-- text -->
-          <div class="things__item--heading">
-            <h3>Lorem Ispum</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              consequatur provident, culpa quaerat fugit dolorem illum
-              repellendus quas quasi obcaecati quia aliquid odit! Vitae, non?
-            </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__label reveal">02 — Skills</div>
+      <h2 class="section__title reveal">Technologies I use</h2>
+      <div class="skills__grid">
+
+        <div class="skill-group reveal">
+          <div class="skill-group__head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M9 9l3 3-3 3M13 15h3" />
+            </svg>
+            Frontend
           </div>
+          <ul>
+            <li><span>HTML / CSS</span>
+              <div class="bar" data-w="90"></div>
+            </li>
+            <li><span>JavaScript</span>
+              <div class="bar" data-w="82"></div>
+            </li>
+            <li><span>React</span>
+              <div class="bar" data-w="75"></div>
+            </li>
+            <li><span>Responsive Design</span>
+              <div class="bar" data-w="85"></div>
+            </li>
+          </ul>
         </div>
-        <!-- item 2 -->
-        <div class="things__item">
-          <!-- img -->
-          <img src="./img/things-item-2.png" alt="illustration of women" />
-          <!-- text -->
-          <div class="things__item--heading">
-            <h3>Lorem Ispum</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              consequatur provident, culpa quaerat fugit dolorem illum
-              repellendus quas quasi obcaecati quia aliquid odit! Vitae, non?
-            </p>
+
+        <div class="skill-group reveal">
+          <div class="skill-group__head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12H3l9-9 9 9h-2" />
+              <path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+            </svg>
+            Backend
           </div>
+          <ul>
+            <li><span>Java</span>
+              <div class="bar" data-w="88"></div>
+            </li>
+            <li><span>Spring Boot</span>
+              <div class="bar" data-w="82"></div>
+            </li>
+            <li><span>REST API</span>
+              <div class="bar" data-w="85"></div>
+            </li>
+            <li><span>Node.js</span>
+              <div class="bar" data-w="65"></div>
+            </li>
+          </ul>
         </div>
-        <!-- item 3 -->
-        <div class="things__item">
-          <!-- img -->
-          <img src="./img/things-item-3.png" alt="illustration of computer" />
-          <!-- text -->
-          <div class="things__item--heading">
-            <h3>Lorem Ispum</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              consequatur provident, culpa quaerat fugit dolorem illum
-              repellendus quas quasi obcaecati quia aliquid odit! Vitae, non?
-            </p>
+
+        <div class="skill-group reveal">
+          <div class="skill-group__head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5v14a9 3 0 0018 0V5" />
+              <path d="M3 12a9 3 0 0018 0" />
+            </svg>
+            Database
           </div>
+          <ul>
+            <li><span>MySQL</span>
+              <div class="bar" data-w="85"></div>
+            </li>
+            <li><span>MongoDB</span>
+              <div class="bar" data-w="30"></div>
+            </li>
+            <li><span>SQL Sever 2008</span>
+              <div class="bar" data-w="50"></div>
+            </li>
+          </ul>
         </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group__head">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg>
+            Tools
+          </div>
+          <ul>
+            <li><span>Git / GitHub</span>
+              <div class="bar" data-w="70"></div>
+            </li>
+            <li><span>Swagger</span>
+              <div class="bar" data-w="50"></div>
+            </li>
+            <li><span>Visual Studio / VS Code</span>
+              <div class="bar" data-w="92"></div>
+            </li>
+          </ul>
+        </div>
+
       </div>
-    </section>
-    <!-- works -->
-    <section id="works">
-      <div class="container">
-        <!-- dec -->
-        <div class="works__dec">
-          <img src="./img/work-dec.png" alt="illustration of leaf" />
-        </div>
-        <div class="works__dec">
-          <img src="./img/work-dec.png" alt="illustration of leaf" />
-        </div>
-        <!-- heading -->
-        <h2>Recent Works</h2>
-        <!-- img -->
-        <div class="works__img">
-          <div class="works__img--single">
-            <img src="./img/work-1.png" alt="bag" />
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__label reveal">03 — Projects</div>
+      <h2 class="section__title reveal">What I've built</h2>
+      <div class="projects__grid">
+
+        <article class="project-card reveal">
+          <div class="project-card__num">01</div>
+          <h3>Classroom Management System</h3>
+          <p>Manage classrooms, teachers and schedules with a full admin dashboard. Role-based access control and
+            dynamic schedule generation.</p>
+          <div class="project-card__stack">
+            <span>React</span><span>Spring Boot</span><span>MySQL</span>
           </div>
-          <div class="works__img--single">
-            <img src="./img/work-2.png" alt="plate" />
+          <div class="project-card__links">
+            <a href="#" target="_blank">GitHub →</a>
+            <a href="#" target="_blank">Live →</a>
           </div>
-          <div class="works__img--single">
-            <img src="./img/work-3.png" alt="women" />
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__num">02</div>
+          <h3>Cafe Management Website</h3>
+          <p>Full POS system for managing orders, menu items and cashier flow. Includes real-time order status and sales
+            reporting.</p>
+          <div class="project-card__stack">
+            <span>React</span><span>Node.js</span><span>MySQL</span>
+            <span>C#</span><span>WinForms</span>
           </div>
-          <div class="works__img--single">
-            <img src="./img/work-4.png" alt="piggy bank" />
+          <div class="project-card__links">
+            <a href="#" target="_blank">GitHub →</a>
+            <a href="#" target="_blank">Live →</a>
           </div>
-        </div>
-        <!-- btn -->
-        <div class="works__btn">
-          <a href="#"><button>View Works</button></a>
-        </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__num">03</div>
+          <h3>Travel Tour Booking</h3>
+          <p>End-to-end booking platform with tour search, filtering, booking management and payment flow.</p>
+          <div class="project-card__stack">
+            <span>Spring Boot</span><span>React</span><span>MySQL</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" target="_blank">GitHub →</a>
+            <a href="#" target="_blank">Live →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__num">04</div>
+          <h3>Music Web App</h3>
+          <p>Online music streaming site with playlist management, search, and a custom audio player built from scratch.
+          </p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" target="_blank">GitHub →</a>
+            <a href="#" target="_blank">Live →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__num">06</div>
+          <h3>Todo App</h3>
+          <p>Full-stack task management app with JWT authentication, CRUD operations, and filter by status. Frontend in
+            React, backend in Spring Boot with MySQL.</p>
+          <div class="project-card__stack">
+            <span>React</span><span>Spring Boot</span><span>MySQL</span><span>JWT</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/TuanAnhHandsome/todo-app" target="_blank">GitHub →</a>
+            <a href="" target="_blank">Live →</a>
+          </div>
+        </article>
+
       </div>
-    </section>
-    <!-- footer -->
-    <footer id="footer">
-      <div class="container">
-        <!-- dec -->
-        <div class="footer__dec">
-          <img src="./img/things-dec-l.png" alt="illustration of leaf" />
-        </div>
-        <!-- img -->
-        <div class="footer__img">
-          <img src="./img/footer-img.png" alt="illustration of women" />
-        </div>
-        <!-- heading -->
-        <div class="footer__heading">
-          <h1>Ready to make something amazing?</h1>
-          <!-- contact -->
-          <div class="footer__contact">
-            <a href="tel:901234567">
-              <i class="fas fa-phone-alt"></i>
-              <p>90-123-4567</p>
-            </a>
-            <a href="mailto:info@me.com">
-              <i class="fas fa-envelope"></i>
-              <p>info@me.com</p>
-            </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section__label reveal">04 — Contact</div>
+      <h2 class="section__title reveal">Get in touch</h2>
+      <p class="contact__desc reveal">
+        I am open to internship opportunities and interesting projects.
+        Feel free to reach out — I'll reply as soon as possible.
+      </p>
+      <div class="contact__links">
+        <a href="mailto:vut.anh1603@gmail.com" class="contact__item reveal">
+          <div class="contact__item-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
           </div>
-          <div class="banner__socials">
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <div>
+            <small>Email</small>
+            <span>vut.anh1603@gmail.com</span>
           </div>
-        </div>
+          <span class="contact__arrow">→</span>
+        </a>
+        <a href="https://github.com/TuanAnhHandsome" target="_blank" class="contact__item reveal">
+          <div class="contact__item-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </div>
+          <div>
+            <small>GitHub</small>
+            <span>github.com/TuanAnhHandsome</span>
+          </div>
+          <span class="contact__arrow">→</span>
+        </a>
+        <a href="https://zalo.me/0348193356" target="_blank" class="contact__item reveal">
+          <div class="contact__item-icon">
+            <svg width="18" height="18" viewBox="0 0 50 50" fill="currentColor">
+              <path
+                d="M25 2C12.3 2 2 12.3 2 25s10.3 23 23 23 23-10.3 23-23S37.7 2 25 2zm-6.7 33.2c-1.1.3-5.4.2-8.3-2.5C6.5 29.9 6 25.8 7.2 22.4c1.4-4 5.2-6.4 9.2-6 1.5.1 3 .7 4.1 1.6.2.1.2.4 0 .5l-1.5 1.5c-.1.1-.3.1-.5 0-.6-.4-1.3-.7-2.1-.8-2.5-.3-4.9 1.2-5.8 3.5-.8 2.1-.4 4.8 1.4 6.4 1.7 1.5 4.3 1.8 6.3.8v-2h-2.2c-.2 0-.4-.2-.4-.4v-1.9c0-.2.2-.4.4-.4h4.5c.2 0 .4.2.4.4v5.3c0 .1-.1.3-.2.3zm15.5-.4h-1.9c-.1 0-.3-.1-.3-.2l-.1-.7c-.9.8-2.1 1.2-3.4 1.2-3.1 0-5.6-2.6-5.6-5.9s2.5-5.9 5.6-5.9c1.2 0 2.4.4 3.3 1.1v-.6c0-.2.2-.4.4-.4h1.9c.2 0 .4.2.4.4v10.6c0 .2-.1.4-.3.4zm8.5 0h-7.1c-.2 0-.4-.2-.4-.4v-1.6c0-.1 0-.2.1-.3l4.5-6.3h-4.1c-.2 0-.4-.2-.4-.4V24c0-.2.2-.4.4-.4h6.8c.2 0 .4.2.4.4v1.6c0 .1 0 .2-.1.3L38 32.2h4.3c.2 0 .4.2.4.4v1.9c0 .2-.2.3-.4.3zm-10.4-8c-1.5 0-2.8 1.3-2.8 2.9s1.2 2.9 2.8 2.9 2.8-1.3 2.8-2.9-1.2-2.9-2.8-2.9z" />
+            </svg>
+          </div>
+          <div>
+            <small>Zalo</small>
+            <span>Chat on Zalo</span>
+          </div>
+          <span class="contact__arrow">→</span>
+        </a>
       </div>
-    </footer>
-    <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/28c0af3030.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- main js -->
-    <script src="./js/main.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Tuan Anh</p>
+    <p>Designed &amp; built by Tuan Anh</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
